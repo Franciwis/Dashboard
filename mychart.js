@@ -5,8 +5,6 @@ export const grafico = document.getElementById('myChartF').getContext("2d");
 
 const temperaturaHora = JSON.parse(localStorage.getItem("temperaturaHora"));
 const diaHora = JSON.parse(localStorage.getItem("diaHora"));
-// let diaHora = [1,3,2,4];
-// let temperatura = [2,1,3,4];
 
 
 

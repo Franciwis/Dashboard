@@ -2,7 +2,7 @@ export const ApiClima1 = async(url) => {
     try{
         const respuesta = await fetch (url);
         
-        // console.log(respuesta);
+     
 
         const datos = await respuesta.json();
 
@@ -26,7 +26,7 @@ export const ApiTempActual = async(url) => {
     try{
         const respuesta = await fetch (url);
         
-        // console.log(respuesta);
+       
 
         const datos = await respuesta.json();
 
@@ -37,4 +37,3 @@ export const ApiTempActual = async(url) => {
         console.log(error)
     }
 }
-// ApiClima1();

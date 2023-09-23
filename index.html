@@ -1,60 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Cardo:wght@700&family=Gloria+Hallelujah&family=Handlee&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Cardo:wght@700&family=Gloria+Hallelujah&family=Handlee&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./estilos.css">
-    <title>Proyecto Api</title>
+    <title>Proyecto Dashboard</title>
 </head>
 
 <body>
     <div class="contenedor">
+
         <br>
-        <h1>Dashboard</h1>
-        
-       <br>
-       
-        
-        <div class="cajaGrafPronostico">
-            <h2>Pronóstico próximo 5 dias cada 3 hrs en Chile</h2>
-            <br>
-            <br>
-
-            <div class="cajaSelEstacion">
-            
-         
-    
-                <label for="ciudades" >Selecciona una ciudad:</label>
-                <select id="ciudades" >
-                </select>
-    
-                <button id="myBoton"class="btn btn-success" class="boton" type="button">Buscar</button>
-            </div>
-
-            <canvas id="myChartF" width="400" height="300"></canvas>
+        <div class="tittle">
+            <h1>Dashboard</h1>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="cajaSelEstacion">
+
+
+
+            <label for="ciudades">Selecciona una ciudad:</label>
+            <select id="ciudades">
+            </select>
+
+            <button id="myBoton" class="btn btn-success" class="boton" type="button">Buscar</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="cajaGrafPronostico">
+            <div class="texto">
+                <h2>Pronóstico próximo 5 dias cada 3 hrs en Chile</h2>
+            </div>
+            <br>
+            <br>
+            <div class="canva">
+
+
+
+
+                <canvas id="myChartF" width="400" height="300"></canvas>
+            </div>
+        </div>
+
         <br>
         <br>
         <div class="box">
-        <div class="cajaTemp">
-            <h2 id="idCiudad">Santiago</h2>
-            <img id="icoAnimado" src="" alt="" height="128">
-            <h2 id="temperaturaValor">temp</h2>
-            <h2 id="temperaturaMax">Temperaturas maximas</h2>
-            <h2 id="temperaturaMin">Temperaturas minimas</h2>
+            <div class="cajaTemp">
+                <h2 id="idCiudad">Santiago</h2>
+                <img id="icoAnimado" src="" alt="" height="128">
+                <h2 id="temperaturaValor">temp</h2>
+                <h2 id="temperaturaMax">Temperaturas maximas</h2>
+                <h2 id="temperaturaMin">Temperaturas minimas</h2>
+            </div>
+            <div class="velViento">
+                <h2 id="vViento">Velocidad del viento</h2>
+            </div>
+            <div class="cajaUV">
+                <h2 id="condHumedad">Niveles de Humedad</h2>
+            </div>
         </div>
-        <div class="velViento">
-            <h2 id="vViento">Velocidad del viento</h2>
-        </div>
-        <div class="cajaUV">
-            <h2 id="condHumedad">Niveles de Humedad</h2>
-        </div>
-        </div>
+
         <br>
         <br>
         <div class="cajaGrafEstaciones">
@@ -62,9 +79,9 @@
             <canvas id="myChartC" width="400" height="300"></canvas>
         </div>
 
-        
 
-        
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -72,4 +89,5 @@
     <script src="./app2.js" type="module"></script>
     <script src="./funciones.js" type="module"></script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@ import { renderDataF } from "./app.js";
 let listaEstaciones = [];
 
 let ciudadTemp = JSON.parse(localStorage.getItem("ciudadTemp"));
-// btnBuscar.addEventListener("click", guardarCiudad);
+
 myBoton.addEventListener("click", guardarCiudad);
 
 
@@ -57,49 +57,24 @@ ciudades.forEach((ciudad) => {
 
 
 
-// export async function llenadoSelect(){
-  
-//   const estadosApi = await fetchApi("https://api.gael.cloud/general/public/clima");
-//   // console.log(estadosApi) //traer la data de api
- 
-
-//   listaEstaciones = estadosApi.map(x => x.Estacion) //le paso al arreglo la lista de estaciones
-//   // console.log(listaEstaciones)
-  
-
-//  let html=""; 
- 
-//   listaEstaciones.forEach(function(element){
-//       html += "<option>" +element+"</option>";
-//               //option value  /label -element - propiedad  /value: sigla código y la ciudad
-//   });           //al value pasar el código / recorrer el arreglo con 2 for
-//   document.querySelector('#estaciones').innerHTML = html; 
-
-// }
-
-// document.onload = llenadoSelect(); 
 
 
 function guardarCiudad()
 {
-    // let ciudadTemp=document.getElementById("ciudad").value;
+   
     let ciudadTemp=document.getElementById("ciudades").value;
     localStorage.setItem("ciudadTemp", JSON.stringify(ciudadTemp));
     
-    // renderData();
-    // location.reload();
+   
     mostarCiudad()
     
 }
 
 function mostarCiudad(){
     ciudadTemp = JSON.parse(localStorage.getItem("ciudadTemp"));
-    // console.log(ciudadTemp);
+  
     renderDataF()
 
 }
 
 
-//capturar con un evento el dato específico (caldera) tarjeta para pintar una ciudad con la temperatura actual y el icono png
-
-//como entregar un valor (value) a la propiedad del option. buscar: como pasar data a la metadata de una etiqueta. 

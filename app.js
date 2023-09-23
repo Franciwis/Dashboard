@@ -41,7 +41,7 @@ async function renderDataActual() {
     idCiudad.textContent = ciudadTemp;
 
 const dataActual = await ApiTempActual('https://api.openweathermap.org/data/2.5/weather?q='+ciudadTemp+'&appid=728aafb044c97dc70ba91271192bcf5a&units=metric&lang=es');
-    // const dataClima = await ApiClima1('https://api.openweathermap.org/data/2.5/forecast?q=santiago&appid=728aafb044c97dc70ba91271192bcf5a&units=metric&lang=es');
+   
 
    console.log(dataActual);
 
@@ -61,10 +61,7 @@ const dataActual = await ApiTempActual('https://api.openweathermap.org/data/2.5/
    condHumedad.textContent = `Humedad ${humedad} % `
 
    const icono = dataActual.weather[0].icon;
-// const urlIcono = 'http://openweathermap.org/img/wn/${icono}.png'
-// const urlIcono = 'http://openweathermap.org/img/wn/'+icono+'.png'
-// icono.src = urlIcono;
-// console.log(dataActual.weather[0].main)
+
 switch (dataActual.weather[0].main){
     case 'Clear':
         icoAnimado.src = './animated/day.svg'
